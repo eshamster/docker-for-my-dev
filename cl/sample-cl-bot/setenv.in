@@ -1,0 +1,3 @@
+export HOST_PORT=19807
+export RUN_NAME=cl
+export MONGO_VOLUME="/data/mongo/cl-bot"
