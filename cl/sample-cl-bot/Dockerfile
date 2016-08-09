@@ -30,6 +30,8 @@ VOLUME ${MONGO_DB}
 # --- --- #
 USER ${user}
 RUN ros run -e '(ql:quickload (list :dexador :clack :ningle))' -q
+RUN ros install prove
 RUN echo "export PATH=${HOME}/.roswell/bin:${PATH}" >> ${HOME}/.bashrc
+
 RUN echo "echo \"start mongodb by 'mongo_start' command\"" >> ${HOME}/.bashrc
 RUN echo "alias mongo_start='mongod --dbpath=${MONGO_DB} > /dev/null 2>&1 &'" >> ${HOME}/.bashrc
