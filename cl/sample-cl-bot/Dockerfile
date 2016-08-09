@@ -1,4 +1,4 @@
-FROM eshamster/cl-devel:1.2
+FROM eshamster/cl-devel:1.3
 
 # --- git settings --- #
 RUN git config --global user.name "eshamster" && \
