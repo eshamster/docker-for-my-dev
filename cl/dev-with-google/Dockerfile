@@ -23,9 +23,9 @@ RUN chown ${user}:${user} ${SSH_HOME}/* && \
 # --- --- #
 USER ${user}
 RUN ros install prove && \
-    ros install qlot # && \
-    # ros install ccl-bin && \
-    # ros use ccl-bin
+    ros install qlot && \
+    ros install ccl-bin && \
+    ros use ccl-bin
 RUN echo "export PATH=${HOME}/.roswell/bin:${PATH}" >> ${HOME}/.bashrc
 RUN echo "export LANG=ja_JP.UTF-8" >> ${HOME}/.bashrc
 
